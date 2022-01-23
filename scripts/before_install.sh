@@ -9,6 +9,8 @@ nvm install node
 DIR="/home/ec2-user/sis-api"
 if [ -d "$DIR" ]; then
   echo "${DIR} exists"
+  cd /home/ec2-user
+  sudo rm -rf sis-api/
 else
   echo "Creating ${DIR} directory"
   mkdir ${DIR}
