@@ -10,12 +10,8 @@ chai.use(chaiHttp);
 
 describe("Users", function () {
     describe("GET /", function () {
-        it("should return 200 OK with a specific message", async function () {
-            const response = await request(app)
-                .get("/")
-                .expect(200)
-                .expect("Content-Type", /json/);
-            assert.strictEqual(response.body.message, "Welcome to mrvincentoti application.");
+        it('should return -1 when the value is not present', function () {
+            assert.equal([1, 2, 3].indexOf(4), -1);
         });
     });
 });
