@@ -6,7 +6,7 @@ sudo chmod -R 777 /home/ec2-user/sis-api
 #navigate into our working directory where we have all our github files
 cd /home/ec2-user/sis-api
 
-#copy .env file from aws
+#copy .env file from s3 bucket
 aws s3 cp s3://nodejs-bucket-003/.env s3://nodejs-bucket-003
 
 #add npm and node to path
