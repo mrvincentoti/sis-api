@@ -8,8 +8,8 @@ cd /home/ec2-user/sis-api
 
 #copy .env file from s3 bucket
 aws s3 cp s3://nodejs-bucket-003/.env .
-chmod +x .env
-chown root .env
+sudo chmod 777 .env
+chown root:root .env
 
 #add npm and node to path
 export NVM_DIR="$HOME/.nvm"	
