@@ -27,7 +27,7 @@ db.sequelize.sync();
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to mrvincentoti application." });
+  res.json({ message: "Welcome to student information system API." });
 });
 
 // routes
