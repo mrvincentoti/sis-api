@@ -46,21 +46,21 @@ describe("Users", function () {
         });
     });
 
-    describe("POST /api/auth/signup", function () {
-        it('it should register a user', async function () {
-            let user = {
-                username: "admin",
-                email: "admin2@demo.com",
-                password: "password123",
-                role: ["user"]
-            }
-            const response = await request(app)
-                .post('/api/auth/signup')
-                .send(user);
-            const output = response.body;
-            expect(output).to.be.an("object");
-            expect(output).to.have.property('message');
-        });
-    });
+    // describe("POST /api/auth/signup", function () {
+    //     it('it should register a user', async function () {
+    //         let user = {
+    //             username: "admin",
+    //             email: "admin2@demo.com",
+    //             password: "password123",
+    //             role: ["user"]
+    //         }
+    //         const response = await request(app)
+    //             .post('/api/auth/signup')
+    //             .send(user);
+    //         const output = response.body;
+    //         expect(output).to.be.an("object");
+    //         expect(output).to.have.property('message');
+    //     });
+    // });
 
 });
