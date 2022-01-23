@@ -18,32 +18,32 @@ describe("Users", function () {
             assert.strictEqual(response.body.message, "Welcome to mrvincentoti application.");
         });
 
-        it("should return 200 OK with several users", async function () {
-            const response = await request(app)
-                .get("/api/users")
-                .expect(200)
-                .expect("Content-Type", /json/);
+        // it("should return 200 OK with several users", async function () {
+        //     const response = await request(app)
+        //         .get("/api/users")
+        //         .expect(200)
+        //         .expect("Content-Type", /json/);
 
-            const users = response.body;
-            expect(users).to.be.an("array");
-            expect(users).length.to.be.greaterThan(0);
-        });
+        //     const users = response.body;
+        //     expect(users).to.be.an("array");
+        //     expect(users).length.to.be.greaterThan(0);
+        // });
 
-        it("should return 200 OK with valid users", async function () {
-            const response = await request(app)
-                .get("/api/users")
-                .expect(200)
-                .expect("Content-Type", /json/);
+        // it("should return 200 OK with valid users", async function () {
+        //     const response = await request(app)
+        //         .get("/api/users")
+        //         .expect(200)
+        //         .expect("Content-Type", /json/);
 
-            const users = response.body;
-            expect(users).to.be.an("array");
+        //     const users = response.body;
+        //     expect(users).to.be.an("array");
 
-            users.forEach(user => {
-                expect(user.username).to.be.a("string");
-                expect(user.email).to.be.a("string");
-                expect(user.id).to.be.a("number");
-            });
-        });
+        //     users.forEach(user => {
+        //         expect(user.username).to.be.a("string");
+        //         expect(user.email).to.be.a("string");
+        //         expect(user.id).to.be.a("number");
+        //     });
+        // });
     });
 
     // describe("POST /api/auth/signup", function () {
